@@ -1,0 +1,61 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: header.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<!-- Theme created with IXThemes Theme Framework and based on ixt01703, http://ixthemes.org, support@ixthemes.org -->
+<div class="ixt-Header">
+ <div class="ixt-Header-png"></div><div class="ixt-Header-jpeg"></div>
+ <{if isset($ixt_headerrss) && ($ixt_headerrss == "yes")}>
+  <div class="ixt-Header-rss"><a href="<{$ixt_url}>/backend.php" class="ixt-Header-rssicon" title="RSS"></a></div>
+ <{/if}>
+ <{if isset($ixt_extheader) && ($ixt_extheader == "yes")}>
+  <div class="ixt-extheader"><{includeq file="$theme_tpl/header_ext.html"}></div>
+  <{if !(isset($ixt_preheader) && ($ixt_preheader == "yes"))}>
+   <div class="ixt-Logo1">
+    <div class="ixt-Logo-image">
+     <{if !(isset($ixt_logos) && ($ixt_logos == ""))}>
+      <a href="<{$ixt_url}>/" title="<{$ixt_sitename}>"><img src="<{$ixt_url}><{$ixt_logos}>" width="<{$ixt_logow}>" height="<{$ixt_logoh}>" alt="<{$ixt_sitename}>" /></a>
+     <{else }>
+      <h1 id="name-text" class="ixt-Logo-name"><a href="<{$ixt_url}>/"><{$ixt_sitename}></a></h1>
+      <div id="slogan-text" class="ixt-Logo-text"><{$ixt_slogan}></div>
+     <{/if}>
+    </div>
+    <div class="ixt-Logo1-banner"><{includeq file="$theme_tpl/banner.html"}></div>
+   </div>
+  <{else }>
+   <div class="ixt-Logo2">
+    <div class="ixt-Logo-image">
+     <{if !(isset($ixt_logos) && ($ixt_logos == ""))}>
+      <a href="<{$ixt_url}>/" title="<{$ixt_sitename}>"><img src="<{$ixt_url}><{$ixt_logos}>" width="<{$ixt_logow}>" height="<{$ixt_logoh}>" alt="<{$ixt_sitename}>" /></a>
+     <{else }>
+      <h1 id="name-text" class="ixt-Logo-name"><a href="<{$ixt_url}>/"><{$ixt_sitename}></a></h1>
+      <div id="slogan-text" class="ixt-Logo-text"><{$ixt_slogan}></div>
+     <{/if}>
+    </div>
+   </div>
+  <{/if}>
+ <{else }>
+  <div class="ixt-Logo">
+   <div class="ixt-Logo-image">
+    <{if !(isset($ixt_logos) && ($ixt_logos == ""))}>
+     <a href="<{$ixt_url}>/" title="<{$ixt_sitename}>"><img src="<{$ixt_url}><{$ixt_logos}>" width="<{$ixt_logow}>" height="<{$ixt_logoh}>" alt="<{$ixt_sitename}>" /></a>
+    <{else }>
+     <h1 id="name-text" class="ixt-Logo-name"><a href="<{$ixt_url}>/"><{$ixt_sitename}></a></h1>
+     <div id="slogan-text" class="ixt-Logo-text"><{$ixt_slogan}></div>
+    <{/if}>
+   </div>
+   <{if !(isset($ixt_preheader) && ($ixt_preheader == "yes"))}>
+    <div class="ixt-Logo-banner"><{includeq file="$theme_tpl/banner.html"}></div>
+   <{/if}>
+  </div>
+ <{/if}>
+</div>

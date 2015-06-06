@@ -1,0 +1,43 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: globalnav.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<{if $cms == "xoops"}>
+ <{php }>include_once XOOPS_ROOT_PATH.'/modules/system/blocks/system_blocks.php'; $modules = b_system_main_show(); $this->assign('block',$modules);<{/php}>
+ <{assign var=ixt_lang_home value=$block.lang_home}>
+<{elseif $cms == "exm"}>
+ <{php }>include_once XOOPS_ROOT_PATH.'/modules/system/blocks/block_mainmenu.php'; $modules = system_bk_mainmenu(); $this->assign('block',$modules);<{/php}>
+ <{assign var=ixt_lang_home value=$block.lang_home}>
+<{elseif $cms == "icms"}>
+ <{php }>include_once ICMS_ROOT_PATH.'/modules/system/blocks/system_blocks.php'; $modules = b_system_main_show(); $this->assign('block',$modules);<{/php}>
+ <{assign var=ixt_lang_home value=$block.lang_home}>
+<{else }>
+ <{assign var=ixt_lang_home value="Home"}>
+<{/if}>
+<{php }>$i=0; $autoitem=5;<{/php}>
+<div class="ixt-nav">
+ <div class="l"></div><div class="r"></div>
+ <ul class="ixt-menu">
+  <li><a href="<{$ixt_url}>/index.php" <{if $ixt_dirname == "system"}> class="active"<{/if}> title="<{$ixt_lang_home}>"><span class="l"></span><span class="r"></span><span class="t"><{$ixt_lang_home}></span></a></li>
+  <{foreach item=module from=$block.modules}>
+   <{php }>$i++; if ($i <= $autoitem) { <{/php}>
+   <li><a href="<{$ixt_url}>/modules/<{$module.directory}>/" <{if $ixt_dirname == $module.directory}> class="active"<{/if}> title="<{$module.name}>"><span class="l"></span><span class="r"></span><span class="t"><{$module.name}></span></a>
+    <ul>
+    <{foreach item=sublink from=$module.sublinks}>
+      <li><a href="<{$sublink.url}>" title="<{$sublink.name}>"><{$sublink.name}></a></li>
+    <{/foreach}>
+    </ul>
+   </li>
+   <{php }>}<{/php}>
+  <{/foreach}>
+ </ul>
+</div>

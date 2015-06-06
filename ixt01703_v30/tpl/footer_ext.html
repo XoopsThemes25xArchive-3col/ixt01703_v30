@@ -1,0 +1,157 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: footer_ext.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<{*
+* system blocks id & templates:
+*  1 - system_block_user.html
+*  2 - system_block_login.html
+*  3 - system_block_search.html
+*  4 - system_block_waiting.html
+*  5 - system_block_mainmenu.html
+*  6 - system_block_siteinfo.html
+*  7 - system_block_online.html
+*  8 - system_block_topusers.html
+*  9 - system_block_newusers.html
+* 10 - system_block_comments.html
+* 11 - system_block_notification.html
+* 12 - system_block_themes.html
+*}>
+<{* start fixed blocks in footer, invisible blocks are included *}>
+<{assign var=ixtbid value="999"}>
+<div class="ixt-contentLayout">
+ <{* extended footer zone 01 *}>
+ <div class="ixt-Footer-block">
+  <div class="ixt-sidebar1">
+   <{php }>$theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/footer_custom_block04.php';<{/php}>
+   <div class="ixt-Block<{$ixtbid}>">
+    <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+     <div class="ixt-Block<{$ixtbid}>-tl"></div><div class="ixt-Block<{$ixtbid}>-tr"></div><div class="ixt-Block<{$ixtbid}>-bl"></div><div class="ixt-Block<{$ixtbid}>-br"></div><div class="ixt-Block<{$ixtbid}>-tc"></div><div class="ixt-Block<{$ixtbid}>-bc"></div><div class="ixt-Block<{$ixtbid}>-cl"></div><div class="ixt-Block<{$ixtbid}>-cr"></div><div class="ixt-Block<{$ixtbid}>-cc"></div>
+    <{/if}>
+    <div class="ixt-Block<{$ixtbid}>-body">
+     <{if $fblock.title}>
+      <div class="ixt-BlockHeader<{$ixtbid}>"><div class="l"></div><div class="r"></div><div class="ixt-BlockHeader<{$ixtbid}>-tag-icon"><div class="t"><h3><{$fblock.title}></h3></div></div></div>
+     <{/if}>
+     <div class="ixt-BlockContent<{$ixtbid}>">
+      <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+       <div class="ixt-BlockContent<{$ixtbid}>-tl"></div><div class="ixt-BlockContent<{$ixtbid}>-tr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-br"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-tc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cc"></div>
+      <{/if}>
+      <div class="ixt-BlockContent<{$ixtbid}>-body"><{$fblock.content}><{* <br /><{$fblock.id}> *}></div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <{* extended footer zone 02 *}>
+ <div class="ixt-Footer-block">
+  <div class="ixt-sidebar1">
+   <{php }>$theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/footer_custom_block01.php';<{/php}>
+   <div class="ixt-Block<{$ixtbid}>">
+    <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+     <div class="ixt-Block<{$ixtbid}>-tl"></div><div class="ixt-Block<{$ixtbid}>-tr"></div><div class="ixt-Block<{$ixtbid}>-bl"></div><div class="ixt-Block<{$ixtbid}>-br"></div><div class="ixt-Block<{$ixtbid}>-tc"></div><div class="ixt-Block<{$ixtbid}>-bc"></div><div class="ixt-Block<{$ixtbid}>-cl"></div><div class="ixt-Block<{$ixtbid}>-cr"></div><div class="ixt-Block<{$ixtbid}>-cc"></div>
+    <{/if}>
+    <div class="ixt-Block<{$ixtbid}>-body">
+     <{if $fblock.title}>
+      <div class="ixt-BlockHeader<{$ixtbid}>"><div class="l"></div><div class="r"></div><div class="ixt-BlockHeader<{$ixtbid}>-tag-icon"><div class="t"><h3><{$fblock.title}></h3></div></div></div>
+     <{/if}>
+     <div class="ixt-BlockContent<{$ixtbid}>">
+      <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+       <div class="ixt-BlockContent<{$ixtbid}>-tl"></div><div class="ixt-BlockContent<{$ixtbid}>-tr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-br"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-tc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cc"></div>
+      <{/if}>
+      <div class="ixt-BlockContent<{$ixtbid}>-body"><{$fblock.content}><{* <br /><{$fblock.id}> *}></div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <{* extended footer zone 03 *}>
+ <div class="ixt-Footer-block">
+  <div class="ixt-sidebar1">
+   <{php }>$theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/footer_custom_block02.php';<{/php}>
+   <div class="ixt-Block<{$ixtbid}>">
+    <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+     <div class="ixt-Block<{$ixtbid}>-tl"></div><div class="ixt-Block<{$ixtbid}>-tr"></div><div class="ixt-Block<{$ixtbid}>-bl"></div><div class="ixt-Block<{$ixtbid}>-br"></div><div class="ixt-Block<{$ixtbid}>-tc"></div><div class="ixt-Block<{$ixtbid}>-bc"></div><div class="ixt-Block<{$ixtbid}>-cl"></div><div class="ixt-Block<{$ixtbid}>-cr"></div><div class="ixt-Block<{$ixtbid}>-cc"></div>
+    <{/if}>
+    <div class="ixt-Block<{$ixtbid}>-body">
+     <{if $fblock.title}>
+      <div class="ixt-BlockHeader<{$ixtbid}>"><div class="l"></div><div class="r"></div><div class="ixt-BlockHeader<{$ixtbid}>-tag-icon"><div class="t"><h3><{$fblock.title}></h3></div></div></div>
+     <{/if}>
+     <div class="ixt-BlockContent<{$ixtbid}>">
+      <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+       <div class="ixt-BlockContent<{$ixtbid}>-tl"></div><div class="ixt-BlockContent<{$ixtbid}>-tr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-br"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-tc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cc"></div>
+      <{/if}>
+      <div class="ixt-BlockContent<{$ixtbid}>-body"><{$fblock.content}><{* <br /><{$fblock.id}> *}></div>
+     </div>
+    </div>
+   </div>
+   <{php }>$theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/footer_custom_block03.php';<{/php}>
+   <div class="ixt-Block<{$ixtbid}>">
+    <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+     <div class="ixt-Block<{$ixtbid}>-tl"></div><div class="ixt-Block<{$ixtbid}>-tr"></div><div class="ixt-Block<{$ixtbid}>-bl"></div><div class="ixt-Block<{$ixtbid}>-br"></div><div class="ixt-Block<{$ixtbid}>-tc"></div><div class="ixt-Block<{$ixtbid}>-bc"></div><div class="ixt-Block<{$ixtbid}>-cl"></div><div class="ixt-Block<{$ixtbid}>-cr"></div><div class="ixt-Block<{$ixtbid}>-cc"></div>
+    <{/if}>
+    <div class="ixt-Block<{$ixtbid}>-body">
+     <{if $fblock.title}>
+      <div class="ixt-BlockHeader<{$ixtbid}>"><div class="l"></div><div class="r"></div><div class="ixt-BlockHeader<{$ixtbid}>-tag-icon"><div class="t"><h3><{$fblock.title}></h3></div></div></div>
+     <{/if}>
+     <div class="ixt-BlockContent<{$ixtbid}>">
+      <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+       <div class="ixt-BlockContent<{$ixtbid}>-tl"></div><div class="ixt-BlockContent<{$ixtbid}>-tr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-br"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-tc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cc"></div>
+      <{/if}>
+      <div class="ixt-BlockContent<{$ixtbid}>-body"><{$fblock.content}><{* <br /><{$fblock.id}> *}></div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <{* extended footer zone 04 *}>
+ <div class="ixt-Footer-block">
+  <div class="ixt-sidebar1">
+   <{php }>$block_id = 5; $theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/footer_system_block.php';<{/php}>
+   <div class="ixt-Block<{$ixtbid}>">
+    <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+     <div class="ixt-Block<{$ixtbid}>-tl"></div><div class="ixt-Block<{$ixtbid}>-tr"></div><div class="ixt-Block<{$ixtbid}>-bl"></div><div class="ixt-Block<{$ixtbid}>-br"></div><div class="ixt-Block<{$ixtbid}>-tc"></div><div class="ixt-Block<{$ixtbid}>-bc"></div><div class="ixt-Block<{$ixtbid}>-cl"></div><div class="ixt-Block<{$ixtbid}>-cr"></div><div class="ixt-Block<{$ixtbid}>-cc"></div>
+    <{/if}>
+    <div class="ixt-Block<{$ixtbid}>-body">
+     <{if $fblock.title}>
+      <div class="ixt-BlockHeader<{$ixtbid}>"><div class="l"></div><div class="r"></div><div class="ixt-BlockHeader<{$ixtbid}>-tag-icon"><div class="t"><h3><{$fblock.title}></h3></div></div></div>
+     <{/if}>
+     <div class="ixt-BlockContent<{$ixtbid}>">
+      <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+       <div class="ixt-BlockContent<{$ixtbid}>-tl"></div><div class="ixt-BlockContent<{$ixtbid}>-tr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-br"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-tc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cc"></div>
+      <{/if}>
+      <div class="ixt-BlockContent<{$ixtbid}>-body"><{$fblock.content}><{* <br /><{$fblock.id}> *}></div>
+     </div>
+    </div>
+   </div>
+   <{php }>$block_id = 7; $theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/footer_system_block.php';<{/php}>
+   <div class="ixt-Block<{$ixtbid}>">
+    <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+     <div class="ixt-Block<{$ixtbid}>-tl"></div><div class="ixt-Block<{$ixtbid}>-tr"></div><div class="ixt-Block<{$ixtbid}>-bl"></div><div class="ixt-Block<{$ixtbid}>-br"></div><div class="ixt-Block<{$ixtbid}>-tc"></div><div class="ixt-Block<{$ixtbid}>-bc"></div><div class="ixt-Block<{$ixtbid}>-cl"></div><div class="ixt-Block<{$ixtbid}>-cr"></div><div class="ixt-Block<{$ixtbid}>-cc"></div>
+    <{/if}>
+    <div class="ixt-Block<{$ixtbid}>-body">
+     <{if $fblock.title}>
+      <div class="ixt-BlockHeader<{$ixtbid}>"><div class="l"></div><div class="r"></div><div class="ixt-BlockHeader<{$ixtbid}>-tag-icon"><div class="t"><h3><{$fblock.title}></h3></div></div></div>
+     <{/if}>
+     <div class="ixt-BlockContent<{$ixtbid}>">
+      <{if isset($ixt_eftstyle) && ($ixt_eftstyle == "yes")}>
+       <div class="ixt-BlockContent<{$ixtbid}>-tl"></div><div class="ixt-BlockContent<{$ixtbid}>-tr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-br"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-tc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cc"></div>
+      <{/if}>
+      <div class="ixt-BlockContent<{$ixtbid}>-body"><{$fblock.content}><{* <br /><{$fblock.id}> *}></div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>

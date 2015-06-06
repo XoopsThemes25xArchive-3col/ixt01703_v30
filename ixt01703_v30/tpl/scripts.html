@@ -1,0 +1,29 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: scripts.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<script type="text/javascript" src="<{xoImgUrl js/script.js}>"></script>
+<{if isset($xoops_version) && (($xoops_version|lower|replace:" ":""|truncate:8:"" == "xoops2.4") || ($xoops_version|lower|replace:" ":""|truncate:8:"" == "xoops2.5"))}>
+ <script type="text/javascript" src="<{$ixt_url}>/browse.php?Frameworks/jquery/jquery.js" charset="utf-8"></script>
+<{else }>
+ <script type="text/javascript" src="<{xoImgUrl js/jquery.js}>" charset="utf-8"></script>
+<{/if}>
+<{if isset($ixt_slides) && !(($ixt_slides == "") || ($ixt_slides == "no"))}>
+ <script type="text/javascript" src="<{xoImgUrl js/jquery.cycle.all.min.js}>" charset="utf-8"></script>
+ <script type="text/javascript" src="<{xoImgUrl js/slides.js}>" charset="utf-8"></script>
+<{/if}>
+<{if (isset($ixt_ctrl2) && ($ixt_ctrl2 == "yes")) || (isset($ixt_ctrl2) && ($ixt_ctrl2 == "yes"))}>
+ <script type="text/javascript" charset="utf-8">
+  var ontxt='<{$ixt_bshow}>';var offtxt='<{$ixt_bhide}>';var blcon='<{$ixt_blconcat}>';var canleft='<{$ixt_canvas_left}>';var canright='<{$ixt_canvas_right}>';var w0='<{$ixt_w0}>';var w1='<{$ixt_w1}>';var w2='<{$ixt_w2}>';
+ </script>
+ <script type="text/javascript" src="<{xoImgUrl js/control.js}>" charset="utf-8"></script>
+<{/if}>

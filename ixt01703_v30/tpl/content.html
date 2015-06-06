@@ -1,0 +1,136 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: content.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<div class="ixt-contentLayout">
+ <{if (($ixt_layout == "lcr") or ($ixt_layout == "lrc")) and !($ixt_blconcat == "rl")}> 
+  <{if ($ixt_rtl and $ixt_canvas_right) or (!$ixt_rtl and $ixt_canvas_left)}>
+   <div id="ixt-sidebar1">
+    <{assign var=ixt_sbstyle value=$ixt_sb1style}>
+    <!-- left column -->
+    <{if $ixt_rtl}>
+     <{if $ixt_canvas_right}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "lr")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}>
+     <{/if}>
+    <{else }>
+     <{if $ixt_canvas_left}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "lr")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}>
+     <{/if}>
+    <{/if}>
+   </div>
+  <{/if}>
+ <{/if}>
+
+ <{if ($ixt_layout == "lrc") and !($ixt_blconcat == "lr")}> 
+  <{if ($ixt_rtl and $ixt_canvas_left) or (!$ixt_rtl and $ixt_canvas_right)}>
+   <div id="ixt-sidebar2">
+    <{assign var=ixt_sbstyle value=$ixt_sb2style}>
+    <!-- right column -->
+    <{if $ixt_rtl}>
+     <{if $ixt_canvas_left}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "rl")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}>
+     <{/if}>
+    <{else }>
+     <{if $ixt_canvas_right}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "rl")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}>
+     <{/if}>
+    <{/if}> 
+   </div>
+  <{/if}>
+ <{/if}>
+
+ <{if isset($ixt_blconcat) && ($ixt_blconcat == "rl")}>
+ <div id="ixt-content-sidebar1">
+ <{elseif isset($ixt_blconcat) && ($ixt_blconcat == "lr")}>
+ <div id="ixt-content-sidebar2">
+ <{elseif $ixt_canvas_left and $ixt_canvas_right}>
+ <div id="ixt-content">
+ <{elseif (!$ixt_canvas_left and $ixt_canvas_right)}>
+ <div id="ixt-content-sidebar1">
+ <{elseif ($ixt_canvas_left and !$ixt_canvas_right)}>
+ <div id="ixt-content-sidebar2">
+ <{else }>
+ <div id="ixt-content-wide">
+ <{/if}>
+  <!-- top content blocks -->
+  <{if $ixt_page_topleft or $ixt_page_topcenter or $ixt_page_topright}>
+   <div class="ixt-<{$content_top_order}>contentblocks" id="ixt-content-topblocks"> 
+    <{includeq file="$theme_tpl/centerblocks.html" topbottom=top lcr=$content_top_order|substr:0:1}>
+    <{includeq file="$theme_tpl/centerblocks.html" topbottom=top lcr=$content_top_order|substr:1:1}>
+    <{includeq file="$theme_tpl/centerblocks.html" topbottom=top lcr=$content_top_order|substr:2:1}> 
+   </div>
+  <{/if}>
+  <!-- module content -->
+  <{if $ixt_contents}>
+   <div class="ixt-Post">
+    <div class="ixt-Post-body">
+     <div class="ixt-Post-inner">
+      <div class="ixt-PostContent"><{$ixt_contents}></div>
+     </div>
+    </div>
+   </div>
+  <{/if}>
+  <!-- bottom content blocks -->
+  <{if $ixt_page_bottomleft or $ixt_page_bottomcenter or $ixt_page_bottomright}>
+   <div class="ixt-<{$content_bottom_order}>contentblocks" id="ixt-content-bottomblocks"> 
+    <{includeq file="$theme_tpl/centerblocks.html" topbottom=bottom lcr=$content_bottom_order|substr:0:1}>
+    <{includeq file="$theme_tpl/centerblocks.html" topbottom=bottom lcr=$content_bottom_order|substr:1:1}>
+    <{includeq file="$theme_tpl/centerblocks.html" topbottom=bottom lcr=$content_bottom_order|substr:2:1}> 
+   </div>
+  <{/if}> 
+ </div>
+ 
+ <{if ($ixt_layout == "clr") and !($ixt_blconcat == "rl")}> 
+  <{if ($ixt_rtl and $ixt_canvas_right) or (!$ixt_rtl and $ixt_canvas_left)}>
+   <div id="ixt-sidebar1">
+    <{assign var=ixt_sbstyle value=$ixt_sb1style}>
+    <!-- left column -->
+    <{if $ixt_rtl}>
+     <{if $ixt_canvas_right}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "lr")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}>
+     <{/if}>
+    <{else }>
+     <{if $ixt_canvas_left}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "lr")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}>
+     <{/if}>
+    <{/if}>
+   </div>
+  <{/if}>
+ <{/if}>
+ 
+ <{if (($ixt_layout == "clr") or ($ixt_layout == "lcr")) and !($ixt_blconcat == "lr")}> 
+  <{if ($ixt_rtl and $ixt_canvas_left) or (!$ixt_rtl and $ixt_canvas_right)}>
+   <div id="ixt-sidebar2">
+    <{assign var=ixt_sbstyle value=$ixt_sb2style}>
+    <!-- right column -->
+    <{if $ixt_rtl}>
+     <{if $ixt_canvas_left}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "rl")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}>
+     <{/if}>
+    <{else }>
+     <{if $ixt_canvas_right}><{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_right}><{/if}>
+     <{if isset($ixt_blconcat) && ($ixt_blconcat == "rl")}>
+      <{includeq file="$theme_tpl/blockszone.html" blocks=$ixt_canvas_left}>
+     <{/if}>
+    <{/if}> 
+   </div>
+  <{/if}>
+ <{/if}>
+ 
+</div>

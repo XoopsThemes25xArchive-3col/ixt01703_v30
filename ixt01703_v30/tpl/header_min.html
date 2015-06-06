@@ -1,0 +1,24 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: header_min.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<div class="ixt-Header">
+ <div class="ixt-Header-png"></div><div class="ixt-Header-jpeg"></div>
+ <div class="ixt-Logo">
+  <{if !(isset($ixt_logos) && ($ixt_logos == ""))}>
+   <div class="ixt-Logo-image"><a href="<{$ixt_url}>/" title="<{$ixt_sitename}>"><img src="<{$ixt_url}><{$ixt_logos}>" width="<{$ixt_logow}>" height="<{$ixt_logoh}>" alt="<{$ixt_sitename}>" /></a></div>
+  <{else }>
+   <h1 id="name-text" class="ixt-Logo-name"><a href="<{$ixt_url}>/"><{$ixt_sitename}></a></h1>
+   <div id="slogan-text" class="ixt-Logo-text"><{$ixt_slogan}></div>
+  <{/if}>
+ </div>
+</div>

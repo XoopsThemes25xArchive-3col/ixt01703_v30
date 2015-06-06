@@ -1,0 +1,31 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: control1.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<{if (is_array($ixt_canvas_left) && count($ixt_canvas_left) == 0)}><{assign var=ixt_canvas_left value=""}><{/if}> <{* if sidebar1 array is empty *}>
+<{if (is_array($ixt_canvas_right) && count($ixt_canvas_right) == 0)}><{assign var=ixt_canvas_right value=""}><{/if}> <{* if sidebar2 array is empty *}>
+<{* assigns for tests only
+<{assign var=ixt_canvas_left value=""}>
+<{assign var=ixt_canvas_right value=""}>
+*}>
+<{if !(($ixt_canvas_left == '') && ($ixt_canvas_right == ''))}>
+ <{if isset($ixt_ctrl1) && ($ixt_ctrl1 == "yes")}>
+  <div class="ixt-ctrl">
+   <{if (($ixt_rtl && $ixt_canvas_right) || (!$ixt_rtl && $ixt_canvas_left)) && !($ixt_blconcat == "rl")}>
+    <div class="ixt-ctrl-left"><span class="ixt-button-wrapper"><span class="l"></span><span class="r"></span><p id="ixt-sidebar1-ctrl" class="ixt-button"></p></span></div>
+   <{/if}>
+   <{if (($ixt_rtl && $ixt_canvas_left) || (!$ixt_rtl && $ixt_canvas_right)) && !($ixt_blconcat == "lr")}>
+    <div class="ixt-ctrl-right"><span class="ixt-button-wrapper"><span class="l"></span><span class="r"></span><p id="ixt-sidebar2-ctrl" class="ixt-button"></p></span></div>
+   <{/if}>
+  </div>
+ <{/if}>
+<{/if}>

@@ -1,0 +1,39 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: preheader.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<{if isset($ixt_preheader) && ($ixt_preheader == "yes")}>
+ <div class="ixt-preheader">
+  <div style="width:50%;float:left;height:100%;">
+   <{includeq file="$theme_tpl/banner.html"}>
+  </div>
+  <div style="width:49.9%;float:right;height:100%;">
+   <div class="ixt-Block">
+    <div class="ixt-Block-tl"></div><div class="ixt-Block-tr"></div><div class="ixt-Block-bl"></div><div class="ixt-Block-br"></div><div class="ixt-Block-tc"></div><div class="ixt-Block-bc"></div><div class="ixt-Block-cl"></div><div class="ixt-Block-cr"></div><div class="ixt-Block-cc"></div>
+    <div class="ixt-Block-body">
+     <div class="ixt-BlockContent">
+      <form style="margin-top:0px;" action="<{$ixt_url}>/search.php" method="get">
+       <div align="right" style="_height:100%;overflow:hidden;">
+        <input type="text" name="query" size="30" maxlength="30" />
+        <input type="hidden" name="action" value="results" />
+        <span class="ixt-button-wrapper">
+         <span class="l"></span><span class="r"></span>
+         <input type="submit" name="search" value="Search" class="ixt-button" />
+        </span>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+<{/if}>

@@ -1,0 +1,27 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: footer.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<div id="ixt-Footer">
+ <{if isset($ixt_extfooter) && ($ixt_extfooter == "yes")}>
+  <{includeq file="$theme_tpl/footer_ext.html"}>
+ <{/if}>
+ <div class="ixt-Footer-inner">
+  <{if isset($ixt_footerrss) && ($ixt_footerrss == "yes")}>
+   <a href="<{$ixt_url}>/backend.php" class="ixt-rss-tag-icon" title="RSS"></a>
+  <{/if}>
+  <div class="ixt-Footer-text">
+   <{$ixt_footer}>
+  </div>
+ </div>
+ <div class="ixt-Footer-background"></div>
+</div>

@@ -1,0 +1,33 @@
+<{*
+* Qualitative Themes for XOOPS
+*
+* @license       http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @project       IXThemes Project, http://ixthemes.org
+* @theme_name    ixt01703
+* @theme_release 3.0
+* @theme_demo    http://ixthemes.sourceforge.net/demo/x/index.php?xoops_theme_select=ixt01703
+* @theme_author  Alexander Galochkin (algalochkin at users.sourceforge.net)
+* @version       $Id: header_ext.html 2767 2010-04-25 07:41:50Z algalochkin $
+*
+* Thanks you, that you have left this header untouched!!!
+*}>
+<{assign var=ixtbid value=""}>
+<{* header block *}>
+<{php }>$theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/header_custom_block01.php';<{/php}>
+<{*
+<{php }>$block_id = 8; $theme = $GLOBALS['xoopsConfig']['theme_set']; include XOOPS_THEME_PATH.'/'.$theme.'/xoplugins/header_system_block.php';<{/php}>
+*}>
+<div class="ixt-Header-block">
+ <div class="ixt-Block<{$ixtbid}>">
+  <div class="ixt-Block<{$ixtbid}>-tl"></div><div class="ixt-Block<{$ixtbid}>-tr"></div><div class="ixt-Block<{$ixtbid}>-bl"></div><div class="ixt-Block<{$ixtbid}>-br"></div><div class="ixt-Block<{$ixtbid}>-tc"></div><div class="ixt-Block<{$ixtbid}>-bc"></div><div class="ixt-Block<{$ixtbid}>-cl"></div><div class="ixt-Block<{$ixtbid}>-cr"></div><div class="ixt-Block<{$ixtbid}>-cc"></div>
+  <div class="ixt-Block<{$ixtbid}>-body">
+   <{if $fblock.title}>
+    <div class="ixt-BlockHeader<{$ixtbid}>"><div class="l"></div><div class="r"></div><div class="ixt-BlockHeader<{$ixtbid}>-tag-icon"><div class="t"><h3 style="margin:0;padding:0;"><{$fblock.title}></h3></div></div></div>
+   <{/if}>
+   <div class="ixt-BlockContent<{$ixtbid}>">
+    <div class="ixt-BlockContent<{$ixtbid}>-tl"></div><div class="ixt-BlockContent<{$ixtbid}>-tr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-br"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-tc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-bc"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cl"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cr"><div></div></div><div class="ixt-BlockContent<{$ixtbid}>-cc"></div>
+    <div class="ixt-BlockContent<{$ixtbid}>-body"><{$fblock.content}><{* <br /><{$fblock.id}> *}></div>
+   </div>
+  </div>
+ </div>
+</div>
